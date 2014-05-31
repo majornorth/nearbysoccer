@@ -3,8 +3,7 @@ Template.gameSubmit.events({
     e.preventDefault();
     
     var game = {
-      message: $(e.target).find('[name=message]').val(),
-      title: $(e.target).find('[name=title').val()
+      message: $(e.target).find('[name=message]').val()
     }
 
     Meteor.call('game', game, function(error, id) {

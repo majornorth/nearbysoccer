@@ -32,7 +32,7 @@ Meteor.methods({
     //}
 
     // pick out the whitelisted keys
-    var game = _.extend(_.pick(gameAttributes, 'message', 'title'), { 
+    var game = _.extend(_.pick(gameAttributes, 'message'), { 
       userId: user._id,
       organizer: user.username,
       submitted: new Date().getTime()
