@@ -1,7 +1,6 @@
 Games = new Meteor.Collection('games');
 
 Games.allow({
-  update: ownsDocument,
   remove: ownsDocument
 });
 
