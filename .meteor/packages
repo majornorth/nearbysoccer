@@ -8,3 +8,4 @@ bootstrap
 iron-router
 accounts-password
 accounts-ui-bootstrap-dropdown
+session-amplify

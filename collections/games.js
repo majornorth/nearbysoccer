@@ -34,7 +34,23 @@ Meteor.methods({
     var game = _.extend(_.pick(gameAttributes, 'message'), { 
       userId: user._id,
       organizer: user.username,
-      submitted: new Date().getTime()
+      submitted: new Date().getTime(),
+      // location: {
+      //   coords: {
+      //     latitude: gameAttributes.location.coords.latitude,
+      //     longitude: gameAttributes.location.coords.longitude
+      //   }
+      // }
+      location: {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [gameAttributes.location.coords.longitude, gameAttributes.location.coords.latitude]
+          },
+          "properties": {
+            "name": "Dinagat Islands"
+          }
+      }
     });
 
     var gameId = Games.insert(game);

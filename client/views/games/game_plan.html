@@ -2,7 +2,7 @@
   <div class="game">
     <div class="game-content">
       <h3><a href="{{pathFor 'gamePage'}}">{{message}} {{#if commentsCount}}({{commentsCount}} comments){{/if}}</a></h3>
-      <span>suggested by {{organizer}}</span> at {{submitted}} {{#if ownGame}}<a href="#" class="delete">Delete</a>{{/if}}
+      <span>Posted near {{location.coords.latitude}} & {{location.coords.longitude}} and suggested by {{organizer}}</span> at {{submitted}} {{#if ownGame}}<a href="#" class="delete">Delete</a>{{/if}}
     </div>
   </div>
 </template>
